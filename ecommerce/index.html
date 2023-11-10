@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css"/>
+    <title>e-commerce</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <span id="purple">Purple</span>
+                Clothers
+            </h1>
+        
+        <nav class="itensNav">
+            <button data-btn="">Todos</button>
+            <button data-btn="Acessorios">Acessórios</button>
+            <button data-btn="Jaquetas">Jaquetas</button>
+            <button data-btn="Camisas">Camisas</button>
+        </nav>
+        <div></div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="vitrine">
+                <ul class="listaRoupas" id="listaPrincipal"></ul>
+            </div>
+            <div class="secaoDireita">
+                <div class="carrinhoDeCompras">
+                    <input type="text" placeholder="O está procurando...." id="input" />
+                    <button type="search" id="searchButton">Pesquisar</button>
+                </div>
+            </div>
+            <div class="carrinho">
+                <p id="tituloCarrinho">Carrinho de Compras</p>
+                <ul class="listaSelecionados" id="listaCompras">
+                    <div class="compraCarrinho">
+                        <h3 id="carrinhoVazio">Carrinho vazio</h3>
+                        <small id="small">adicione itens</small>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </main>
+    <script type="module" src="/assets/js/database.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
+</body>
+
+</html>

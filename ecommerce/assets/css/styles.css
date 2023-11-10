@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2? family= Alumni+Sans+Pinstripe:ital@1 & family= Aref+Ruqaa+Ink & family= Borel & family= Climate+Crisis & família= Inter:wght@100 & família= Montserrat:wght@100 & família= Noto+Sans+NKo+Unjoined & família= Oswald & família= Poppins:wght@100;200 & família= Raleway:ital,wght@1,200 & família= Roboto:wght@300;400 & família= Sono:wght@200 &exibir=trocar');
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 8px 10px #f5f5f5b9;
+    height: 10vh;
+}
+
+header .container{
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+header .container .logo{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+#purple{
+    color: #37268ce1;
+}
+
+header .container .itensNav{
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+
+.itensNav button{
+    all: unset;
+    border-bottom: 2px rgb(255,255,255) solid;
+    padding: 4px;
+    font-weight: 500;
+    transition: .2s all;
+}
+
+.itensNav button:focus{
+    border-bottom: #000000 solid 2px;
+}
+
+.itensNav button:hover{
+    border-bottom: solid 2px #000000;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    height: 105%;
+}
+
+main .container{
+    width: 80vw;
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 50px auto;
+    height: 680px;
+    max-height: 680px;
+}
+
+.vitrine{
+    width: 965px;
+    height: inherit;
+}
+
+.listaRoupas{
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0px;
+    align-content: flex-start;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-height: 320px;
+    max-width: 230px;
+    height: 325px;
+    list-style-type: none;
+    margin: 5px;
+    box-shadow: 0px 1px 3px 3px rgb(197, 197, 197);
+    border: 2px #ffffff solid;
+    padding: 6px;
+}
+
+.card:hover{
+    border: 2px solid #37268c;
+}
+
+.card img{
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 72px;
+    margin: 0;
+    border: 0;
+}
+
+.card p,
+.card button,
+.card h3{
+    margin: 0;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.card h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card .descricao{
+    margin: 0;
+    padding: 8px 9px;
+}
+
+.card .type{
+    margin: 5px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 90px;
+    height: 25px;
+    padding: 0px;
+    background-color: #37268c;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+
+.carrinhoDeCompras{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrinhoDeCompras button , .carrinhoDeCompras input{
+    all: unset;
+}
+.carrinhoDeCompras input {
+    border-bottom:1px solid #000000;
+    color: #000000;
+    padding-bottom: .25rem;
+}
+.carrinhoDeCompras button {
+
+    max-width: 50%;
+    border: 1px solid black;
+
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s all;
+}
+.carrinhoDeCompras button:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
