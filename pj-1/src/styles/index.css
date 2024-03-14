@@ -1,0 +1,12 @@
+#nav-bar{
+  border-bottom: 1px solid #a1a1aa ;
+}
+#Logotipo{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+#btn-seacrh{
+  visibility: hidden;
+}
