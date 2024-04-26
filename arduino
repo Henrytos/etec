@@ -1,0 +1,102 @@
+
+int led1 = 11;
+int led2 = 12;
+int led3 = 13;
+
+void setup() {
+
+  pinMode (led1, OUTPUT);
+  pinMode (led2, OUTPUT);
+  pinMode (led3, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, HIGH);
+  delay(2000);
+
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, LOW);
+  delay(2000);
+
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  delay(2000);
+
+
+}
+
+
+
+int tempoVerde;
+int tempoVermelho;
+int tempoAmarelo;
+
+
+int led1 = 11;
+int led2 = 12;
+int led3 = 13;
+
+void setup() {
+  
+  tempoVerde=2000;
+  tempoVermelho=2000;
+  tempoAmarelo=2000;
+  pinMode (led1, OUTPUT);
+  pinMode (led2, OUTPUT);
+  pinMode (led2, OUTPUT);
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  
+  if(Serial.available()){
+    char c = Serial.read();
+    
+    switch(c){
+      case '+':
+        tempoVerde = Serial.parseInt();
+        break;
+      case '=':
+        tempoAmarelo = Serial.parseInt();
+        break;
+      case '-':
+        tempoVermelho = Serial.parseInt();
+        break;
+       default:
+        Serial.print("VALOR INVALIDA");
+        break;
+    }
+    
+    Serial.println(c);
+    Serial.println(" Verde, Amarelo , Vermelho");
+    Serial.print(tempoVermelho);
+    Serial.print(" - ");
+    Serial.print(tempoAmarelo);
+    Serial.print(" - ");
+    Serial.println();
+    
+   
+    
+    }
+    
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, HIGH);
+  delay(tempoAmarelo);
+
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, LOW);
+  delay(tempoVermelho);
+  
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  delay(tempoVerde);
+  
+}
