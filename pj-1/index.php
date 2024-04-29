@@ -6,8 +6,8 @@ $user = $_SESSION['usuario'] ? $_SESSION['usuario'] : [];
 if (!$user) {
     header('Location: ./login.php');
 }
-
-
+$data = mysqli_query($mysqli, "SELECT * FROM tbalunos");
+$users = $data->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -53,6 +53,7 @@ if (!$user) {
                 </form>
             </div>
         </div>
+        <a class="btn btn-danger" href="./logout.php">sair</a>
     </nav>
 
 
@@ -60,6 +61,20 @@ if (!$user) {
         <h3>bem vindo <?php
         echo $user['nome'];
         ?></h3>
+        <img src="./assets/uploads/<?php echo $user["foto"] ?>" alt=<?php echo 'imagem de' . $user['nome']; ?>>
+
+        <div>
+            <?php
+
+            foreach ($users as $user_current) {
+                // Display user information
+                echo "Name: " . $user_current['nome'] . "<br>";
+                echo "Email: " . $user_current['email'] . "<br>";
+                echo "Age: " . $user_current['idade'] . "<br>";
+                echo "<br>";
+            }
+            ?>
+        </div>
     </section>
 
 
