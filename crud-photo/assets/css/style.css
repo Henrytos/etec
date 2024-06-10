@@ -1,0 +1,12 @@
+Body{
+    margin: 0;
+    padding: 0;
+    background-image: url("/crudphotov1/assets/images/ETECPJ01.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    border-radius: 50%;
+}
