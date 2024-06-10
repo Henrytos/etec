@@ -1,28 +1,19 @@
 <?php
 
 include("conexao.php");
-
 if (isset($_POST["btnLogin"])) {
 
-    //(real_escape_string) Esta função é usada para criar uma string SQL válida que você pode usar em uma instrução SQL
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
-
     $sql_code = "SELECT * FROM tbalunos WHERE email = '$email' AND senha = '$senha'";
 
-    //função executa uma consulta em um banco de dados.
     $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
     $quantidade = $sql_query->num_rows;
-
     if ($quantidade == 1) {
-
-        //fetch_assoc() - Obtem uma linha do conjunto de resultados como uma matriz
         $usuario = $sql_query->fetch_assoc();
-
         if (!isset($_SESSION)) {
             session_start();
         }
-
         $_SESSION['id']     = $usuario['id'];
         $_SESSION['nome']   = $usuario['nome'];
 
@@ -30,17 +21,14 @@ if (isset($_POST["btnLogin"])) {
         if ($usuario['nacess'] == 3) {
             header("Location: indexuserl3.php");
         }
+        else if ($usuario['nacess'] == 1) {
+            header("Location: indexadm.php");
+        }
     } else {
         echo "Falha ao logar! E-mail ou senha incorretos";
     }
 }
-
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,8 +44,6 @@ if (isset($_POST["btnLogin"])) {
 <body>
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
-
-
         <div class="login">
             <form name="login" action="" method="POST">
                 <label for="chk" aria-hidden="true">Login</label>

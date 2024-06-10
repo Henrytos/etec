@@ -12,7 +12,7 @@ if (isset($_POST["cadastrar"])) {
     $curso          =           $_POST["curso"];
     $senha          =           $_POST["senha"];
     $serie          =           $_POST["serie"];
-    $nacess         =           3;
+    $nacess         =           1;
     $email          =           $_POST["email"];
     //Salvando a imagem
     $extensao = strtolower(substr($_FILE['imagem']['name'],-4));//pega os 4 ultimos caracteres de uma string
@@ -39,13 +39,14 @@ if (isset($_POST["cadastrar"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
 
 
-        <h1 class="text-center">Cadastro de Alunos</h1>
+    <h1 class="text-center">Cadastro de Alunos</h1>
 
     <br />
     <div class="container">
@@ -69,7 +70,7 @@ if (isset($_POST["cadastrar"])) {
                     <input type="text" class="form-control" id="exampleFormControlInput1" name="matricula">
                 </tr>
 
-               
+
 
                 <label for="exampleFormControlInput1" class="form-label">Curso</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" name="curso">
@@ -80,7 +81,8 @@ if (isset($_POST["cadastrar"])) {
                 </tr>
                 <tr>
                     <label for="exampleFormControlInput1" class="form-label">Foto</label>
-                    <input type="file" class="form-control" id="exampleFormControlInput1" name="imagem" accept="image/*">
+                    <input type="file" class="form-control" id="exampleFormControlInput1" name="imagem"
+                        accept="image/*">
                 <tr>
 
                 <tr>
@@ -97,9 +99,9 @@ if (isset($_POST["cadastrar"])) {
                     <label for="exampleFormControlInput1" class="form-label">Email</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" name="email">
                 </tr>
-                
-                
-                    <td><button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button></td>
+
+
+                <td><button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button></td>
                 </tr>
             </form>
             </tr>
@@ -107,9 +109,15 @@ if (isset($_POST["cadastrar"])) {
             <tbody>
 
                 <!-- JavaScript -->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+                    crossorigin="anonymous"></script>
 </body>
 
 </html>

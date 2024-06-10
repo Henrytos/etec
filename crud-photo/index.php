@@ -27,10 +27,10 @@ if (isset($_POST["cadastrar"])) {
         <div class="login">
             <form name="acesso" action="" Method="POST">
                 <h1 class="cab01">Acesso ao Sistema</h1>
-                
+
                 <label>Para Cadastrar-se:</label>
                 <button name="cadastrar">Inscreva-se</button>
-                
+
                 <label>Login</label>
                 <button name="login">Acessar</button>
             </form>
