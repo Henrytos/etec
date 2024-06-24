@@ -25,13 +25,23 @@ if (isset($_POST["cadastrar"])) {
     
     move_uploaded_file($_FILES["imagem"]["tmp_name"], $diretorio.$novo_nome);
 
-    $inserir =  "INSERT INTO tbalunos (nome, idade, matricula, curso, senha, foto, serie, nacess, email) VALUES ('$nome', '$idade','$matricula','$curso', '$senha','$novo_nome', '$serie','$nacess', '$email')";
+    $inserir =  "UPDATE  tbalunos (nome, idade, matricula, curso, senha,  serie, nacess, email) 
+    SET nome = '$nome', 
+    idade = '$idade',
+    matricula = '$matricula',
+    curso = '$curso',
+    senha = '$senha',   serie =  '$serie',
+    nacess= '$nacess',
+    email =  '$email'
+    WHERE id='$user_edit_id'";
 
     $query = mysqli_query($mysqli, $inserir);
-
-
+    if(mysqli_num_rows($query) > 0){
     header("location:index.php");
+
+    }    
 }
+
 $query_select_user_by_id = "SELECT *  FROM tbalunos WHERE id='$user_edit_id'";
 $result = $mysqli->query($query_select_user_by_id);
 $user_target =$result->fetch_assoc(); 
