@@ -16,14 +16,14 @@ if (isset($_POST["cadastrar"])) {
     $curso          =           $_POST["curso"];
     $senha          =           $_POST["senha"];
     $serie          =           $_POST["serie"];
-    $nacess         =           1;
+    $nacess         =           $_POST['nacess'];
     $email          =           $_POST["email"];
-    //Salvando a imagem
-    $extensao = strtolower(substr($_FILE['imagem']['name'],-4));//pega os 4 ultimos caracteres de uma string
-    $novo_nome = md5(time()).$extensao;//define o nome do arquio criptografado
-    $diretorio = "./assets/uploads/";//define o diretório
+    // //Salvando a imagem
+    // $extensao = strtolower(substr($_FILE['imagem']['name'],-4));//pega os 4 ultimos caracteres de uma string
+    // $novo_nome = md5(time()).$extensao;//define o nome do arquio criptografado
+    // $diretorio = "./assets/uploads/";//define o diretório
     
-    move_uploaded_file($_FILES["imagem"]["tmp_name"], $diretorio.$novo_nome);
+    // move_uploaded_file($_FILES["imagem"]["tmp_name"], $diretorio.$novo_nome);
 
     $inserir =  "UPDATE  tbalunos (nome, idade, matricula, curso, senha,  serie, nacess, email) 
     SET nome = '$nome', 
