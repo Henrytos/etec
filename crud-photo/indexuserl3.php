@@ -84,6 +84,13 @@ $queryCadastro      =       mysqli_query($mysqli, $buscaCadastro);
                         <th scope="col">Email</th>
                         <th scope="col">Celular</th>
                         <th scope="col">Foto</th>
+                        <th>
+                            <!--EDIT-->
+                        </th>
+                        <th>
+                            <!--DELETE-->
+                        </th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -100,8 +107,15 @@ $queryCadastro      =       mysqli_query($mysqli, $buscaCadastro);
                         <td><?php echo $nome; ?></td>
                         <td><?php echo $email; ?></td>
                         <td><?php echo $celular; ?></td>
-                        <td><?php echo $celular ?></td>
-                        <td><?php echo $foto ?></td>
+                        <td>
+                            <img src="./assets/uploads/<?php echo $foto ?>" alt="" width="40" height="40">
+                        </td>
+                        <td>
+                            <a href="./edit.php?id=<?php echo $id ?>">Editar</a>
+                        </td>
+                        <td>
+                            <a href="./delete.php?id=<?php echo $id ?>">Excluir</a>
+                        </td>
 
                     </tr>
 
